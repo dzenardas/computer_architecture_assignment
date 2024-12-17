@@ -1,0 +1,7 @@
+# Ignoruojami pagalbiniai failai
+
+*.aux
+*.log
+*.out
+*.toc
+*.gz
