@@ -44,7 +44,13 @@ Motorola 68HC11 buvo sukurtas naudojant tranzistorius ir integrinius grandynus (
 \textbf{Motorola 68HC11.} Motorola 68HC11 buvo daug mažesnis ir lengvesnis nei AN/UYK-43. Jo dydis buvo mažas, ir jis galėjo būti naudojamas įvairiuose įrenginiuose, tokiuose kaip ekranų, spausdintuvų, klaviatūrų, modemų, įkrovimo kortelių telefonų ir buitinės technikos, pavyzdžiui, šaldytuvų, skalbimo mašinų ir mikrobangų krosnelių, valdikliai (Introduction to Motorola 68HC11, p. 5). Jis buvo mikroschemų dydžio, tai buvo mikroprocesorius, galintis tilpti į labai mažus fizinius įrenginius.
 \subsection{Energijos suvartojimas.} 
 \textbf{AN/UYK-43.} Energijos suvartojimas buvo labai didelis: 5,5 kw (oras), 4,7 kw (vanduo) (HP-9020C/AN/UYK-43 Study, 1987, p. 14). Dėl to šie kompiuteriai buvo gana neefektyvūs energijos požiūriu.\\
-\textbf{Motorola 68HC11.} 68HC11 turėjo mažą energijos suvartojimą (M68HC11E Family Data Sheet, p. 21). Tai buvo svarbu, kadangi jis buvo naudojamas daugelyje nešiojamų ir mažo energijos suvartojimo prietaisų.
+\textbf{Motorola 68HC11.} 68HC11 turėjo mažą energijos suvartojimą (M68HC11E Family Data Sheet, 2005, p. 21). Tai buvo svarbu, kadangi jis buvo naudojamas daugelyje nešiojamų ir mažo energijos suvartojimo prietaisų.
+
+\section{Adresų tipai.}
+\subsection{AN/UYK-43:}
+AN/UYK-43 yra \textbf{dviejų adresų mašina} (two-address machine). Dviejų adresų mašinos instrukcijų formatas leidžia efektyviau dirbti nei vieno adreso mašinoms, tačiau jos yra šiek tiek sudėtingesnės (HP9020C/AN/UYK-43 Study, 1987, p. 20).
+\subsection{Motorola 68HC11:}
+Motorola 68HC11 yra \textbf{dviejų adresų mašina} (two-address machine), nes jos komandų rinkinyje yra naudojami du operandai daugumoje instrukcijų. Tai reiškia: vienas operandas nurodo duomenų vietą (pvz., atminties adresą arba registrą), iš kur duomenys bus paimti (Šaltinio adresas), kitas operandas nurodo vietą, kur duomenys bus saugomi ar naudojami operacijai (pvz., rezultatas bus įrašytas į registrą arba atmintį) (Tikslinis adresas) (Open AI, 2024). 
 
 \section{Nuorodos:}
 \begin{itemize}
@@ -52,7 +58,8 @@ Motorola 68HC11 buvo sukurtas naudojant tranzistorius ir integrinius grandynus (
     \item Wikipedia (2024) Motorola 68HC11. Galima rasti adresu: \url{https://en.wikipedia.org/wiki/Motorola_68HC11} (Accessed: 18 December 2024).
     \item Systems Exploration, Inc. (1987) HP-9020C/AN/UYK-43 Study. Galima rasti adresu: \url{https://apps.dtic.mil/sti/tr/pdf/ADA188056.pdf} (Accessed: 18 December 2024).
     \item Nežinomas (Unknown) (2000) Introduction to Motoola 68HC11. Galima rasti adresu: \url{https://www.slideshare.net/slideshow/motorola-68hc11/22644023#5} (Accessed: 18 December 2024).
-    \item freescale.com (2005) M68HC11E Family Data Sheet. Galima rasti adresu: \url{file:///C:/Users/dzenardas/Desktop/M68HC11E.pdf} (Accessed: 18 December 2024).
+    \item freescale.com (2005) M68HC11E Family Data Sheet. Galima rasti adresu: \url{https://www.nxp.com/docs/en/data-sheet/M68HC11E.pdf} (Accessed: 18 December 2024).
+    \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Kokio adreso tipui priskiriama Motorola 68HC11? Ar tai buvo beadresinės (stekinės), vieno adreso, dviejų adresų,  trijų adresų ar keturios adresų mašinos? Paaiškink kodėl.". Atsakymas: "Motorola 68HC11 priskiriama dviejų adresų mašinų kategorijai. Tai reiškia, kad jo instrukcijų rinkinio architektūra leidžia instrukcijose naudoti du operandus: vieną šaltiniui ir vieną paskirties vietai. Motorola 68HC11 priskiriama dviejų adresų mašinoms, nes jos komandų rinkinyje yra naudojami du operandai daugumoje instrukcijų. Tai reiškia: Šaltinio adresas: Vienas operandas nurodo duomenų vietą (pvz., atminties adresą arba registrą), iš kur duomenys bus paimti. Tikslinis adresas: Kitas operandas nurodo vietą, kur duomenys bus saugomi ar naudojami operacijai (pvz., rezultatas bus įrašytas į registrą arba atmintį).". (Accessed on: 18 December 2024) (Version: 4o), iš: \url{https://chat.openai.com/}
 \end{itemize}
 
 \end{document}
