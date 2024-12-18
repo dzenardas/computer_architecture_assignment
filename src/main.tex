@@ -155,7 +155,7 @@ Komandų rinkinys apėmė apie \textbf{60–90 komandų}, suskirstytų į šias 
     \item \texttt{TBA} – Perkelia akumuliatoriaus B reikšmę į akumuliatorių A.
     \item \texttt{LSRA} – Atlieka akumuliatoriaus A bitų poslinkį į dešinę.
 \end{enumerate}
-\section*{Panašios ir Skirtingos Komandos}
+\section*{Panašios ir Skirtingos Komandos.}
 \textbf{Panašios komandos}: 
 Abiejose architektūrose yra: aritmetinės operacijos: ADD, SUB; loginės operacijos: AND, OR.
 Šakų komandos: Sąlyginės (BRANCH_EQ, BEQ) ir besąlyginės šakos (JUMP, JMP).
@@ -170,6 +170,25 @@ Motorola 68HC11 turi paprastesnį komandų rinkinį, skirtą efektyviam darbui s
 AN/UYK-43 kompiuterinė architektūra palaiko kelis adresavimo būdus, kurie užtikrina efektyvų duomenų valdymą. Tiesioginio adresavimo metu atminties adresas nurodomas tiesiogiai instrukcijoje. Netiesioginis adresavimas leidžia instrukcijoje nurodyti nuorodą į atminties vietą, kurioje yra faktinis adresas. Kintamo ilgio simbolių adresavimas suteikia galimybę valdyti duomenis kintamo ilgio simbolių sekoje, o tai yra ypač naudinga teksto apdorojimui. 32 bitų atminties adresavimas leidžia adresuoti iki 4 milijardų žodžių, suteikdamas galimybę valdyti didelės apimties duomenų erdvę. Galiausiai, privilegijuotas ir neprivilegijuotas vykdymas leidžia valdyti prieigą prie resursų, atskiriant saugumo lygmenis. Šie adresavimo būdai AN/UYK-43 sistemoje užtikrina lankstų ir efektyvų duomenų valdymą bei operacijų vykdymą (HP-9020C/AN/UYK-43 Study, 1987, p. 22).
 \subsection{Motorola 68HC11:}
 Motorola 68HC11 kompiuterinė architektūra palaikė kelis adresavimo būdus, kurie leido efektyviai vykdyti įvairias operacijas. Imediatinio adresavimo metu duomenys yra pateikiami tiesiogiai instrukcijoje, naudojant prefiksą „\#“, kuris nurodo duomenų baitą ar žodį. Tiesioginis adresavimas naudoja konkrečią RAM atminties vietą, esančią adresų diapazone nuo \$0000 iki \$00FF, kur vienas baitas nurodo atminties lokaciją. Išplėstinis adresavimas remiasi 16 bitų adresu, tiesiogiai įrašytu instrukcijoje. Tuo tarpu indeksuotas adresavimas apskaičiuoja duomenų vietą, pridėdamas poslinkį prie indekso registro (X arba Y) reikšmės. Įgimtasis adresavimas nenaudoja išorinių atminties adresų, nes duomenys yra „įgimti“ mikroprocesoriui. Galiausiai, santykinis adresavimas naudojamas šakinių (branching) instrukcijose, kur adresas apskaičiuojamas pagal poslinkį nuo šiuo metu vykdomos instrukcijos adreso. Šie adresavimo būdai užtikrina lankstų ir efektyvų duomenų valdymą bei programų vykdymą (68HC11 Assembly Language Programming, n.d.).
+\subsection*{Panašumai.}
+\begin{itemize}
+    \item \textbf{Tiesioginis adresavimas:} Abiejose sistemose atminties adresas yra tiesiogiai nurodomas instrukcijoje. 
+    AN/UYK-43 nurodo konkrečią atminties vietą, o Motorola 68HC11 naudoja RAM adresus diapazone nuo \texttt{\$0000} iki \texttt{\$00FF}.
+    \item \textbf{Netiesioginis adresavimas (arba indeksavimas):} 
+    AN/UYK-43 leidžia nurodyti nuorodą į adresą, esančią kitoje atminties vietoje, o Motorola 68HC11 naudoja indeksuotą adresavimą, kur poslinkis pridedamas prie registro (X arba Y), kad apskaičiuotų faktinį adresą.
+    \item \textbf{Santykinis adresavimas:} Abiejose architektūrose šis metodas naudojamas šakų valdymui (angl. \textit{branching}), kai adresas apskaičiuojamas pagal poslinkį nuo dabartinės instrukcijos vietos.
+\end{itemize}
+\subsection*{Skirtumai.}
+\begin{itemize}
+    \item \textbf{Kintamo ilgio simbolių adresavimas:} 
+    Šis metodas, naudojamas AN/UYK-43, leidžia dirbti su duomenų sekų tekstiniu apdorojimu. Motorola 68HC11 tokio adreso būdo neturi.
+    \item \textbf{32 bitų adresavimas:} 
+    AN/UYK-43 palaiko 32 bitų adresus, leidžiančius valdyti iki 4 milijardų žodžių atminties. Motorola 68HC11 remiasi 16 bitų adresavimu, kuris apriboja atminties erdvę iki 64 KB.
+    \item \textbf{Įgimtasis adresavimas:} 
+    Šis metodas būdingas Motorola 68HC11 ir nenaudoja išorinių adresų – duomenys yra tiesiogiai mikroprocesoriuje. AN/UYK-43 tokio metodo nepalaiko.
+    \item \textbf{Privilegijuotas ir neprivilegijuotas vykdymas:} 
+    AN/UYK-43 palaiko privilegijų lygius, leidžiančius valdyti prieigą prie resursų ir užtikrinti sistemos saugumą. Motorola 68HC11 tokio mechanizmo neturi.
+\end{itemize}
 
 \section{Nuorodos:}
 \begin{itemize}
