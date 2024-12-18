@@ -1,3 +1,4 @@
+% Dženardas Jevič, Informatika
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -27,6 +28,12 @@
     {\large Vilnius \\ 2024 \par}
 \end{titlepage}
 
+% Turinys
+\newpage
+\tableofcontents
+\newpage
+
+% Pats darbas
 \section{Įvadas.}
 Šiame darbe bus nagrinėjamos dvi kompiuterių architektūros: AN/UYK-43 ir Motorola 68HC11, kurios atspindi skirtingas technologines kryptis ir taikymo sritis.\\
 \textbf{AN/UYK-43} – tai CISC architektūros kompiuteris, sukurtas JAV kariniams jūrų laivynams. Pristatytas 1980-aisiais, jis buvo naudojamas kaip pagrindinė valdymo ir duomenų apdorojimo sistema laivų bei povandeninių laivų įrangoje. AN/UYK-43 buvo žinomas dėl savo patikimumo, gebėjimo apdoroti didelius duomenų kiekius ir palaikyti įvairius adresavimo režimus, įskaitant kintamo ilgio simbolių valdymą, kuris buvo naudingas teksto ir signalų apdorojimui.\\
@@ -34,70 +41,70 @@
 
 \section{Kompiuterio bazė.}
 \subsection{AN/UYK-43 (1960-ųjų pabaiga - 1970-ųjų pradžia).}
-AN/UYK-43 kompiuterio elementinė bazė buvo sudaryta iš puslaidininkinių mikroschemų, tranzistorių logikos (TTL) ir feritinės magnetinių šerdžių atminties (32-bit Computers, Chapter 55, 2024). Visi komponentai atitiko karinius standartus (MIL-STD), užtikrinant patikimumą ir atsparumą ekstremalioms sąlygoms.
+AN/UYK-43 kompiuterio elementinė bazė buvo sudaryta iš puslaidininkinių mikroschemų, tranzistorių logikos (TTL) ir feritinės magnetinių šerdžių atminties (VIP CLUB, 2024). Visi komponentai atitiko karinius standartus (MIL-STD), užtikrinant patikimumą ir atsparumą ekstremalioms sąlygoms.
 \subsection{Motorola 68HC11 (1980-ųjų pradžia).}
 Motorola 68HC11 buvo sukurtas naudojant tranzistorius ir integrinius grandynus (IC). Tai buvo modernus mikroprocesorius, kurio elementai buvo pagrįsti tranzistoriais ir kitomis pažangiomis technologijomis (Wikipedia, 2024).
 
 \section{Fizinės savybės.}
-\subsection{Dydis ir svoris:}
-\textbf{AN/UYK-43.} Kompiuteris buvo labai didelis. AN/UYK-43 buvo naudojamas kariuomenės, jūrų laivynų ir kitose srityse, todėl užėmė daug vietos ir buvo sunkus. Tikslūs matmenys ir svoris: 1,8 metrų aukščio, 0,5 metrų pločio, 0,57 metrų gylio, sveria nuo 666-756 kg., priklausomai nuo pasirinktos konfigūracijos (HP-9020C/AN/UYK-43 Study, 1987, p. 14). Ši technologija buvo naudojama kompiuteriuose, kurie buvo tokio dydžio, kad juos reikėjo montuoti į didelius spintų tipo korpusus.\\
+\subsection{Dydis ir svoris.}
+\textbf{AN/UYK-43.} Kompiuteris buvo labai didelis. AN/UYK-43 buvo naudojamas kariuomenės, jūrų laivynų ir kitose srityse, todėl užėmė daug vietos ir buvo sunkus. Tikslūs matmenys ir svoris: 1,8 metrų aukščio, 0,5 metrų pločio, 0,57 metrų gylio, sveria nuo 666-756 kg., priklausomai nuo pasirinktos konfigūracijos (Systems Exploration, Inc., 1987, p. 14). Ši technologija buvo naudojama kompiuteriuose, kurie buvo tokio dydžio, kad juos reikėjo montuoti į didelius spintų tipo korpusus.\\
 \textbf{Motorola 68HC11.} Motorola 68HC11 buvo daug mažesnis ir lengvesnis nei AN/UYK-43. Jo dydis buvo mažas, ir jis galėjo būti naudojamas įvairiuose įrenginiuose, tokiuose kaip ekranų, spausdintuvų, klaviatūrų, modemų, įkrovimo kortelių telefonų ir buitinės technikos, pavyzdžiui, šaldytuvų, skalbimo mašinų ir mikrobangų krosnelių, valdikliai (Introduction to Motorola 68HC11, p. 5). Jis buvo mikroschemų dydžio, tai buvo mikroprocesorius, galintis tilpti į labai mažus fizinius įrenginius.
 \subsection{Energijos suvartojimas.} 
-\textbf{AN/UYK-43.} Energijos suvartojimas buvo labai didelis: 5,5 kw (oras), 4,7 kw (vanduo) (HP-9020C/AN/UYK-43 Study, 1987, p. 14). Dėl to šie kompiuteriai buvo gana neefektyvūs energijos požiūriu.\\
-\textbf{Motorola 68HC11.} 68HC11 turėjo mažą energijos suvartojimą (M68HC11E Family Data Sheet, 2005, p. 21). Tai buvo svarbu, kadangi jis buvo naudojamas daugelyje nešiojamų ir mažo energijos suvartojimo prietaisų.
+\textbf{AN/UYK-43.} Energijos suvartojimas buvo labai didelis: 5,5 kw (oras), 4,7 kw (vanduo) (Systems Exploration, Inc., 1987, p. 14). Dėl to šie kompiuteriai buvo gana neefektyvūs energijos požiūriu.\\
+\textbf{Motorola 68HC11.} 68HC11 turėjo mažą energijos suvartojimą (freescale.com, 2005, p. 21). Tai buvo svarbu, kadangi jis buvo naudojamas daugelyje nešiojamų ir mažo energijos suvartojimo prietaisų.
 
 \section{Adresų tipai.}
-\subsection{AN/UYK-43:}
-AN/UYK-43 yra \textbf{dviejų adresų mašina} (two-address machine). Dviejų adresų mašinos instrukcijų formatas leidžia efektyviau dirbti nei vieno adreso mašinoms, tačiau jos yra šiek tiek sudėtingesnės (HP9020C/AN/UYK-43 Study, 1987, p. 20).
-\subsection{Motorola 68HC11:}
+\subsection{AN/UYK-43.}
+AN/UYK-43 yra \textbf{dviejų adresų mašina} (two-address machine). Dviejų adresų mašinos instrukcijų formatas leidžia efektyviau dirbti nei vieno adreso mašinoms, tačiau jos yra šiek tiek sudėtingesnės (Systems Exploration, Inc., 1987, p. 20).
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 yra \textbf{dviejų adresų mašina} (two-address machine), nes jos komandų rinkinyje yra naudojami du operandai daugumoje instrukcijų. Tai reiškia: vienas operandas nurodo duomenų vietą (pvz., atminties adresą arba registrą), iš kur duomenys bus paimti (Šaltinio adresas), kitas operandas nurodo vietą, kur duomenys bus saugomi ar naudojami operacijai (pvz., rezultatas bus įrašytas į registrą arba atmintį) (Tikslinis adresas) (Open AI, 2024).
 
 \section{Registrai.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 AN/UYK-43 yra 32 bitų karinė kompiuterinė sistema, plačiai naudota Jungtinių Amerikos Valstijų kariniame laivyne dėl savo patikimumo ir atsparumo aplinkos poveikiui. Ši sistema turi tiek bendrosios paskirties, tiek specializuotus registrus, kurie užtikrina efektyvų duomenų apdorojimą bei sistemos valdymą.\\
-Bendrosios paskirties registrų (General Purpose Registers, GPR) yra 16, ir kiekvienas jų yra 32 bitų pločio. Jie naudojami pagrindinėms aritmetinėms bei loginėms operacijoms atlikti, taip pat trumpalaikiam duomenų saugojimui vykdymo metu. Be bendrosios paskirties registrų, AN/UYK-43 turi ir specializuotus registrus, tokius kaip programos skaitiklis (Program Counter, PC) bei būsenos registras (Status Register). Programos skaitiklis seka ir saugo vykdomos instrukcijos adresą, o būsenos registras saugo rezultatus apibūdinančias vėliavas, įskaitant nulio, neigiamo, pernešimo ir kitas reikšmes (HP-9020C/AN/UYK-43 Study, 1987, p. 14).\\
-Specializuoti registrai taip pat yra naudojami efektyviam atminties adresavimui ir operacijų sekimui. AN/UYK-43 architektūros 32 bitų registrai užtikrina didesnį duomenų plotį, leidžiantį greičiau apdoroti didelius informacijos kiekius ir efektyviai vykdyti karines kompiuterines užduotis. Šis registrų dizainas prisidėjo prie AN/UYK-43 ilgaamžiškumo ir sėkmės sudėtingose, realaus laiko užduotyse (HP-9020C/AN/UYK-43 Study, 1987, p. 14).
-\subsection{Motorola 68HC11:}
+Bendrosios paskirties registrų (General Purpose Registers, GPR) yra 16, ir kiekvienas jų yra 32 bitų pločio. Jie naudojami pagrindinėms aritmetinėms bei loginėms operacijoms atlikti, taip pat trumpalaikiam duomenų saugojimui vykdymo metu. Be bendrosios paskirties registrų, AN/UYK-43 turi ir specializuotus registrus, tokius kaip programos skaitiklis (Program Counter, PC) bei būsenos registras (Status Register). Programos skaitiklis seka ir saugo vykdomos instrukcijos adresą, o būsenos registras saugo rezultatus apibūdinančias vėliavas, įskaitant nulio, neigiamo, pernešimo ir kitas reikšmes (Systems Exploration, Inc., 1987, p. 14).\\
+Specializuoti registrai taip pat yra naudojami efektyviam atminties adresavimui ir operacijų sekimui. AN/UYK-43 architektūros 32 bitų registrai užtikrina didesnį duomenų plotį, leidžiantį greičiau apdoroti didelius informacijos kiekius ir efektyviai vykdyti karines kompiuterines užduotis. Šis registrų dizainas prisidėjo prie AN/UYK-43 ilgaamžiškumo ir sėkmės sudėtingose, realaus laiko užduotyse (Systems Exploration, Inc., 1987, p. 14).
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 yra 8 bitų mikrovaldiklis, plačiai naudojamas įterptinėse sistemose dėl savo universalumo ir patikimumo. Ši architektūra turi tiek bendrosios paskirties, tiek specializuotus registrus, užtikrinančius pagrindines mikrovaldiklio funkcijas.\\
 Pagrindiniai registrai yra akumuliatoriai A ir B (Accumulator A ir B), kurių kiekvienas yra 8 bitų pločio. Jie naudojami aritmetinėms ir loginėms operacijoms bei trumpalaikiam duomenų saugojimui. Be to, šie du registrai gali būti sujungti į D registrą, kuris tampa 16 bitų pločio ir leidžia apdoroti didesnius duomenų tipus (Introduction to Motorola 68HC11, n.d., p. 10).\\
 Motorola 68HC11 taip pat turi du indeksų registrus – X ir Y, kurie yra 16 bitų pločio ir naudojami adresų skaičiavimui bei netiesioginiam atminties adresavimui. Šie registrai ypač naudingi darbui su struktūromis ir masyvais (Introduction to Motorola 68HC11, p. 10).
 Kiti specializuoti registrai apima programos skaitiklį (Program Counter, PC), kuris yra 16 bitų pločio ir nurodo vykdomos instrukcijos adresą, bei steką valdymo registrą (Stack Pointer, SP), taip pat 16 bitų pločio, kuris naudojamas valdyti steką funkcijų iškvietimų ir grįžimų metu. Mikrovaldiklis taip pat turi būsenos registrą (Condition Code Register, CCR), kuris yra 8 bitų pločio ir saugo procesoriaus būsenos vėliavas, tokias kaip nulio, neigiamo, pernešimo ir perpildymo (Introduction to Motorola 68HC11, n.d., p. 10).
 
 \section{Požymių bitai.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 AN/UYK-43 architektūroje buvo naudojami požymių bitai, kurie saugomi būsenos registre (Status Register). Šie bitai yra itin svarbūs vykdant sąlygines operacijas, nes jie atspindi procesoriaus būseną po kiekvienos aritmetinės ar loginės instrukcijos.\\
 Pagrindiniai požymių bitai apima: N (neigiamas rezultatas), kuris nustatomas, jei operacijos rezultatas yra neigiamas; Z (nulio bitas), kuris nustatomas, kai rezultatas yra nulis; C (pernešimo bitas), žymintis pernešimą iš aukščiausiojo bito ar skolinimąsi; ir V (perpildymo bitas), kuris rodo rezultato perpildymą, kai reikšmė viršija leistiną diapazoną. Be šių, naudojamas ir H (pagalbinio pernešimo bitas), kuris svarbus atliekant BCD aritmetiką (Open AI, 2024).
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 mikrovaldiklio architektūroje požymių bitai yra saugomi būsenos registre (Condition Code Register, CCR), kuris atspindi procesoriaus būseną po kiekvienos aritmetinės ar loginės operacijos. Šie bitai leidžia efektyviai vykdyti sąlygines instrukcijas ir valdyti programos eigą.\\
 Pagrindiniai požymių bitai yra šie: N (neigiamas rezultatas), kuris nustatomas į 1, jei operacijos rezultatas yra neigiamas; Z (nulio bitas), nustatomas, kai rezultatas yra lygus nuliui; C (pernešimo bitas), naudojamas žymėti pernešimą iš aukščiausiojo bito arba skolinimąsi; ir V (perpildymo bitas), rodo rezultato perpildymą, kai reikšmė viršija leistiną ribą. Taip pat yra H (pagalbinio pernešimo bitas), kuris naudojamas BCD (Binary-Coded Decimal) aritmetikoje (Introduction to Motorola 68HC11, p. 11).
 
 \section{Duomenų plotis (mašininis žodis).}
-\subsection{AN/UYK-43:}
-AN/UYK-43 naudojo 32 bitų mašininį žodį, leidžiantį efektyviai apdoroti duomenis ir adresuoti atmintį (HP-9020C/AN/UYK-43 Study, 1987, p. 14).
-\subsection{Motorola 68HC11:}
+\subsection{AN/UYK-43.}
+AN/UYK-43 naudojo 32 bitų mašininį žodį, leidžiantį efektyviai apdoroti duomenis ir adresuoti atmintį (Systems Exploration, Inc., 1987, p. 14).
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 naudojo 8 bitų mašininį žodį, tačiau turėjo 16 bitų registrus, skirtus adresavimui ir kai kurioms aritmetinėms operacijoms (Introduction to Motorola 68HC11, p. 4).
 
 \section{Atminties išdėstymas.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 Atminties išdėstymas: adresų erdvė: AN/UYK-43 sistema turėjo 32 bitų adresų erdvę, todėl teorinis adresų plotis buvo 4 GB; struktūra: adresų erdvė buvo ištisinė, tačiau joje buvo naudojami segmentai arba bankai, kad būtų lengviau tvarkyti atmintį; tipinis atminties kiekis: sistemoje paprastai buvo naudojama nuo 1 MB iki 2 GB operatyviosios atminties, priklausomai nuo versijos ir užduočių; maksimalus atminties kiekis: kadangi adresų erdvė buvo 32 bitų, maksimalus adresuojamos atminties kiekis buvo 4 GB (Open AI, 2024).
 \subsection{Motorola 68HC11:}
 Atminties išdėstymas: adresų erdvė: 68HC11 turėjo 16 bitų adresų magistralę, leidžiančią adresuoti iki 64 KB; struktūra: Adresų erdvė buvo padalyta į segmentus: programos kodas (ROM arba EPROM), operatyvioji atmintis (RAM), specialiųjų funkcijų registrai, I/O periferija.
 Tipinis atminties kiekis: Paprastai naudojama buvo: ROM: 4 KB–8 KB, RAM: 256 B–1 KB, EEPROM: apie 512 B. Maksimalus atminties kiekis: 64 KB (Open AI, 2024).
 
 \section{Virtualioji atmintis.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 \begin{itemize}
     \item \textbf{Virtualios atminties palaikymas}: AN/UYK-43 nepalaikė virtualios atminties (Open AI, 2024).
     \item \textbf{Puslapiavimas/segmentavimas}: Ši sistema naudojo tik fizinę atmintį ir neturėjo puslapiavimo ar segmentavimo mechanizmų (Open AI,2024).
 \end{itemize}
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 \begin{itemize}
     \item \textbf{Virtualios atminties palaikymas}: Motorola 68HC11 taip pat nepalaikė virtualios atminties (Open AI,2024).
     \item \textbf{Puslapiavimas/segmentavimas}: 68HC11 naudojo tik fizinę atmintį ir neturėjo puslapiavimo ar segmentavimo mechanizmų (Open AI,2024).
 \end{itemize}
 
 \section{Komandų sistema (ISA).}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 Komandų rinkinys buvo \textbf{vidutinio dydžio} ir apėmė apie \textbf{150–200 komandų}, kurios buvo suskirstytos į pagrindines klases:
 \begin{itemize}
     \item \textbf{Aritmetinės komandos:} Sudėtis (\texttt{ADD}), atimtis (\texttt{SUB}), daugyba (\texttt{MUL}) (Open AI, 2024).
@@ -127,7 +134,7 @@ Komandų rinkinys buvo \textbf{vidutinio dydžio} ir apėmė apie \textbf{150–
     \item \texttt{MOV R1, R2} – Perkelia R2 reikšmę į R1.
     \item \texttt{SHIFT\_LEFT R1} – Perkelia R1 registro bitus į kairę.\\
 \end{enumerate}
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 Komandų rinkinys apėmė apie \textbf{60–90 komandų}, suskirstytų į šias klases:
 \begin{itemize}
     \item \textbf{Aritmetinės komandos:} Sudėtis (\texttt{ADD}), atimtis (\texttt{SUB}), inkrementas (\texttt{INC}), dekrementas (\texttt{DEC}) (68HC11 Assembly Language Programming, n.d.).
@@ -162,20 +169,25 @@ Komandų rinkinys apėmė apie \textbf{60–90 komandų}, suskirstytų į šias 
     \item \texttt{TBA} – Perkelia akumuliatoriaus B reikšmę į akumuliatorių A.
     \item \texttt{LSRA} – Atlieka akumuliatoriaus A bitų poslinkį į dešinę.
 \end{enumerate}
-\section*{Panašios ir Skirtingos Komandos.}
-\textbf{Panašios komandos}: 
-Abiejose architektūrose yra: aritmetinės operacijos: ADD, SUB; loginės operacijos: AND, OR.
-Šakų komandos: Sąlyginės (BRANCH_EQ, BEQ) ir besąlyginės šakos (JUMP, JMP).
-Duomenų perkėlimas: LOAD/STORE ir LDAA/STAB.\\
-\textbf{Skirtingos komandos}: 
-Skirtumai
-AN/UYK-43 turi daugiau komandų teksto apdorojimui (kintamo ilgio simboliai) ir palaiko 32 bitų adresavimą.
-Motorola 68HC11 turi paprastesnį komandų rinkinį, skirtą efektyviam darbui su ribotais resursais ir mažesnės atminties erdvėmis.
+\section*{Panašios ir Skirtingos Komandos}
+\textbf{Panašios komandos:} \\
+Abiejose architektūrose yra: 
+\begin{itemize}
+    \item \textbf{Aritmetinės operacijos:} ADD, SUB
+    \item \textbf{Loginės operacijos:} AND, OR
+    \item \textbf{Šakų komandos:} Sąlyginės šakos (BRANCH\_EQ, BEQ) ir besąlyginės šakos (JUMP, JMP)
+    \item \textbf{Duomenų perkėlimas:} LOAD/STORE ir LDAA/STAB
+\end{itemize}
+\textbf{Skirtingos komandos:}
+\begin{itemize}
+    \item \textbf{AN/UYK-43:} Turi daugiau komandų, skirtų teksto apdorojimui (pvz., kintamo ilgio simboliams) ir palaiko 32 bitų adresavimą.
+    \item \textbf{Motorola 68HC11:} Turi paprastesnį komandų rinkinį, optimizuotą efektyviam darbui su ribotais resursais ir mažesne atminties erdve.
+\end{itemize}
 
 \section{Adresavimo būdai.}
-\subsection{AN/UYK-43:}
-AN/UYK-43 kompiuterinė architektūra palaiko kelis adresavimo būdus, kurie užtikrina efektyvų duomenų valdymą. Tiesioginio adresavimo metu atminties adresas nurodomas tiesiogiai instrukcijoje. Netiesioginis adresavimas leidžia instrukcijoje nurodyti nuorodą į atminties vietą, kurioje yra faktinis adresas. Kintamo ilgio simbolių adresavimas suteikia galimybę valdyti duomenis kintamo ilgio simbolių sekoje, o tai yra ypač naudinga teksto apdorojimui. 32 bitų atminties adresavimas leidžia adresuoti iki 4 milijardų žodžių, suteikdamas galimybę valdyti didelės apimties duomenų erdvę. Galiausiai, privilegijuotas ir neprivilegijuotas vykdymas leidžia valdyti prieigą prie resursų, atskiriant saugumo lygmenis. Šie adresavimo būdai AN/UYK-43 sistemoje užtikrina lankstų ir efektyvų duomenų valdymą bei operacijų vykdymą (HP-9020C/AN/UYK-43 Study, 1987, p. 22).
-\subsection{Motorola 68HC11:}
+\subsection{AN/UYK-43.}
+AN/UYK-43 kompiuterinė architektūra palaiko kelis adresavimo būdus, kurie užtikrina efektyvų duomenų valdymą. Tiesioginio adresavimo metu atminties adresas nurodomas tiesiogiai instrukcijoje. Netiesioginis adresavimas leidžia instrukcijoje nurodyti nuorodą į atminties vietą, kurioje yra faktinis adresas. Kintamo ilgio simbolių adresavimas suteikia galimybę valdyti duomenis kintamo ilgio simbolių sekoje, o tai yra ypač naudinga teksto apdorojimui. 32 bitų atminties adresavimas leidžia adresuoti iki 4 milijardų žodžių, suteikdamas galimybę valdyti didelės apimties duomenų erdvę. Galiausiai, privilegijuotas ir neprivilegijuotas vykdymas leidžia valdyti prieigą prie resursų, atskiriant saugumo lygmenis. Šie adresavimo būdai AN/UYK-43 sistemoje užtikrina lankstų ir efektyvų duomenų valdymą bei operacijų vykdymą (Systems Exploration, Inc., 1987, p. 22).
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 kompiuterinė architektūra palaikė kelis adresavimo būdus, kurie leido efektyviai vykdyti įvairias operacijas. Imediatinio adresavimo metu duomenys yra pateikiami tiesiogiai instrukcijoje, naudojant prefiksą „\#“, kuris nurodo duomenų baitą ar žodį. Tiesioginis adresavimas naudoja konkrečią RAM atminties vietą, esančią adresų diapazone nuo \$0000 iki \$00FF, kur vienas baitas nurodo atminties lokaciją. Išplėstinis adresavimas remiasi 16 bitų adresu, tiesiogiai įrašytu instrukcijoje. Tuo tarpu indeksuotas adresavimas apskaičiuoja duomenų vietą, pridėdamas poslinkį prie indekso registro (X arba Y) reikšmės. Įgimtasis adresavimas nenaudoja išorinių atminties adresų, nes duomenys yra „įgimti“ mikroprocesoriui. Galiausiai, santykinis adresavimas naudojamas šakinių (branching) instrukcijose, kur adresas apskaičiuojamas pagal poslinkį nuo šiuo metu vykdomos instrukcijos adreso. Šie adresavimo būdai užtikrina lankstų ir efektyvų duomenų valdymą bei programų vykdymą (68HC11 Assembly Language Programming, n.d.).
 \subsection*{Panašumai.}
 \begin{itemize}
@@ -198,54 +210,53 @@ Motorola 68HC11 kompiuterinė architektūra palaikė kelis adresavimo būdus, ku
 \end{itemize}
 
 \section{I/O (Input/Output) galimybės.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 AN/UYK-43 pasižymėjo plačiomis I/O galimybėmis. kompiuteris pripažįstamas kaip vienas efektyviausių ir greičiausių duomenų iš išorinių jutiklių apdorojimo sistemų. Jis leido efektyviai esant grėsmei reaguoti į artėjančias raketas ar orlaivius, mikrosekundes tikslumu ir užtikrinti greitą duomenų perdavimą žmogui (32-bit Computers, Chapter 55, 2024).
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 Motorola 68HC11: Motorola 68HC11 mikrovaldiklis pasižymėjo universaliomis, tačiau paprastomis I/O galimybėmis, pritaikytomis įterptinėms sistemoms ir valdymo funkcijoms. Jis turėjo skaitmenines I/O linijas ir analoginę įvestį per A/D keitiklį. Tačiau, skirtingai nei AN/UYK-43, Motorola 68HC11 I/O galimybės buvo paprastesnės ir skirtos mažesnio masto sistemoms, kur greitas duomenų perdavimas nebuvo prioritetas (68HC11 Assembly Language Programming, n.d.).
 
 \section{Duomenų tipai.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 AN/UYK-43 kompiuterinė sistema palaikė įvairius duomenų tipus, kurie buvo būtini sudėtingiems realaus laiko skaičiavimams ir karinėms užduotims. Sveikieji skaičiai buvo koduojami naudojant dvejeto papildinį (Two's complement), kuris užtikrino efektyvų neigiamų ir teigiamų skaičių apdorojimą, supaprastindamas aritmetines operacijas. Sistema taip pat palaikė fiksuoto kablelio aritmetiką, kuri buvo plačiai naudojama, kai reikėjo atlikti skaičiavimus su ribotu tikslumu ir dideliu greičiu, pavyzdžiui, apdorojant signalus ir jutiklių duomenis.\\
 Be to, slankiojo kablelio aritmetika buvo svarbus duomenų tipas, naudojamas tiksliems ir dinamiškiems skaičiavimams, kuriems reikalingas didelis dinaminis diapazonas, kaip radarų apdorojimas ar navigacijos algoritmai. Sistema taip pat palaikė dešimtainius skaičius (BCD – Binary-Coded Decimal), kurie buvo naudojami finansiniuose ir inžineriniuose skaičiavimuose, kai reikėjo tiksliai apdoroti dešimtainius duomenis (Open AI, 2024).
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 Motorola 68HC11 mikrovaldiklis palaikė kelis pagrindinius duomenų tipus, pritaikytus mažoms įterptinėms sistemoms ir valdymo funkcijoms. Sistema palaikė sveikus skaičius, kurie buvo koduojami naudojant dvejeto papildinį (Two’s complement), kas leidžia efektyviai apdoroti tiek teigiamus, tiek neigiamus skaičius.\\
 Fiksuoto kablelio aritmetika buvo viena iš pagrindinių aritmetikos rūšių, naudojamų Motorola 68HC11, nes ji užtikrina greitą ir efektyvų skaičiavimą su ribotu tikslumu, kai nereikia didelio dinaminio diapazono, pavyzdžiui, valdymo sistemose. Tačiau slankiojo kablelio aritmetika nebuvo palaikoma aparatinės įrangos lygiu, todėl buvo naudojama programinė įranga, jei reikėjo atlikti tokius skaičiavimus.\\
 Mikrovaldiklis taip pat palaikė dešimtainius skaičius (BCD – Binary-Coded Decimal), naudojamus, pavyzdžiui, finansiniuose skaičiavimuose ir kai reikia apdoroti skaičius su tikslumu iki dešimtainių skaitmenų. Dėl šių duomenų tipų Motorola 68HC11 buvo optimizuotas mažoms ir paprastoms įterptinėms sistemoms, kur greitis ir paprastumas buvo svarbūs, o didelio tikslumo aritmetikos nereikėjo (Open AI, 2024).
 
 \section{Spartinančioji atmintis.}
-\subsection{AN/UYK-43:}
-AN/UYK-43 naudojo spartinančiąją atmintį. Jos talpa buvo 16,3384 32 bitų žodžių, naudojama kaip aukštos spartos buferis tarp procesoriaus ir pagrindinės atminties (HP-9020C/AN/UYK-43 Study, 1987, p. 22).
+\subsection{AN/UYK-43.}
+AN/UYK-43 naudojo spartinančiąją atmintį. Jos talpa buvo 16,3384 32 bitų žodžių, naudojama kaip aukštos spartos buferis tarp procesoriaus ir pagrindinės atminties (Systems Exploration, Inc., 1987, p. 22).
 \subsection{Motorola 68HC11:}
-Motorola 68HC11 neturėjo spartinančiosios atminties (EE290A HW2 Microcontroller Survey, n.d.).
+Motorola 68HC11 neturėjo spartinančiosios atminties (Philip Chong, 1999).
 
 \section{Taikymo sritys.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 AN/UYK-43 buvo sukurtas 1960-aisiais metais, skirtas karinėje ir jūrų laivynų įrangoje. Šis kompiuteris buvo naudojamas kaip kontrolės ir valdymo sistema, apdorojant duomenis ir palaikant ryšius su kitais įrenginiais (Wikipedia, 2024). Pavyzdys: AN/UYK-43 buvo naudojamas jūrų laivyno raketų valdymo sistemoje, kur jis tvarkė ir apdorodavo raketų trajektorijas bei koordinavo jų veikimą realiuoju laiku (Wikipedia, 2024).
 \subsection{Motorola 68HC11:}
 Motorola 68HC11 buvo plačiai naudojama automatikos ir integruotose sistemose, tokiose kaip automobilių valdymo sistemos, buitiniai prietaisai, viešbučio kortelių raktų rašytojuose, mėgėjų robotikoje ir įvairiose kitose įterptosiose sistemose (Wikipedia, 2024). Pavyzdys: 68HC11 buvo naudojamas automobilių elektroninėse valdymo sistemose, kur jis valdė įvairius jutiklius, kaip, pavyzdžiui, variklio temperatūros ar kuro lygio jutiklius, ir teikė informaciją vairuotojui (Open AI, 2024).
 
 \section{Programinė įranga.}
-\subsection{AN/UYK-43:}
+\subsection{AN/UYK-43.}
 \begin{itemize}
     \item \textbf{Parašyta programinė įranga}: AN/UYK-43 buvo naudojama specializuotuose kariniuose ir moksliniuose įrenginiuose, todėl dauguma programinės įrangos buvo skirta šiems tikslams. Tačiau šios programos buvo labai specifinės ir mažai prieinamos plačiajai visuomenei (Wikipedia, 2024).
     \item \textbf{Prieinamumas}: Programinė įranga, parašyta AN/UYK-43, šiandien nėra lengvai prieinama, nes tai buvo specializuota sistema, kuri nebuvo plačiai naudojama komercinėse ar akademinėse aplinkose (Open AI, 2024).
-    \item \textbf{Kompiliatoriai ir įrankiai}: Naudoti specialūs kompiliatoriai ir programavimo įrankiai realaus laiko operacinės sistemos, skirti tik šiai sistemai, tačiau šiuolaikiniai derintojai ir profiliuotojai nebuvo plačiai prieinami. Sistema turėjo dvi procesoriaus kalbas: CMS-2L kompiliatorių ir MACRO/L Assemblerį (HP-9020C/AN/UYK-43 Study, 1987, p. 24).
-    \item \textbf{Bibliotekos}: Dėl specifinių taikymo sričių buvo naudojamos specializuotos bibliotekos, susijusios su kariniais ir valdymo tikslais, tačiau jos buvo uždaros ir nepasiekiamos viešai (HP-9020C/AN/UYK-43 Study, 1987, p. 24).
+    \item \textbf{Kompiliatoriai ir įrankiai}: Naudoti specialūs kompiliatoriai ir programavimo įrankiai realaus laiko operacinės sistemos, skirti tik šiai sistemai, tačiau šiuolaikiniai derintojai ir profiliuotojai nebuvo plačiai prieinami. Sistema turėjo dvi procesoriaus kalbas: CMS-2L kompiliatorių ir MACRO/L Assemblerį (Systems Exploration, Inc., 1987, p. 24).
+    \item \textbf{Bibliotekos}: Dėl specifinių taikymo sričių buvo naudojamos specializuotos bibliotekos, susijusios su kariniais ir valdymo tikslais, tačiau jos buvo uždaros ir nepasiekiamos viešai (Systems Exploration, Inc., 1987, p. 24).
 \end{itemize}
-\subsection{Motorola 68HC11:}
+\subsection{Motorola 68HC11.}
 \begin{itemize}
     \item \textbf{Parašyta programinė įranga}: Motorola 68HC11 buvo naudojama plačiai įvairiose taikymo srityse, tokiose kaip automatikos sistemos, buitiniai prietaisai, ir integruoti sprendimai. Dėl šios priežasties buvo parašyta daugybė programinės įrangos įvairiems tikslams (Wikipedia, 2024).
     \item \textbf{Prieinamumas}: Motorola 68HC11 programinė įranga vis dar prieinama, nes ji
 buvo populiari 1980-1990-aisiais. Šiandien dauguma įrankių ir bibliotekų yra archyvuojami ir vis dar gali būti naudojami, nors jie nėra taip plačiai naudojami kaip
 anksčiau (Open AI, 2024).
     \item \textbf{Kompiliatoriai ir įrankiai}: Motorola 68HC11 mikrovaldikliui buvo sukurti įvairūs plėtros įrankiai, skirti programuoti, derinti ir valdyti sistemas. SPGMR11 buvo naudojamas EEPROM/EPROM programavimui, leidžiantis efektyviai įkelti programas ( M68HC11E Family
- Data Sheet, 2005, p. 189). MMDS11 suteikė modulinę plėtros sistemą su realaus laiko atminties langais, magistralės analizatoriumi ir šaltinio lygio derinimu, pritaikytą sudėtingesniems projektams ( M68HC11E Family
- Data Sheet, 2005, p. 188). PCbug11 buvo populiarus derinimo įrankis, leidęs programuoti mikrovaldiklį ir vykdyti klaidų diagnostiką per RS-232 sąsają ( M68HC11E Family Data Sheet, 2005, p. 229). Šie įrankiai buvo plačiai naudojami pramonėje ir moksliniuose tyrimuose.
-    \item \textbf{Bibliotekos}: 68HC11 turėjo tam tikras standartines bibliotekas kurios buvo skirtos periferinių įrenginių tokių kaip A/D keitikliai, SPI, ir UART, valdymui, skirtas lengviau integruoti jutiklius, įvedimui ir išvedimui, bei kitoms tipinėms mikrokontrolerių funkcijoms. Taip pat buvo prieinami įrankiai ir bibliotekos, kuriuos sukūrė bendruomenė ir komerciniai tiekėjai (M68HC11
- REFERENCE MANUAL, 1996, p. 231).
+ Data Sheet, 2005, p. 189). MMDS11 suteikė modulinę plėtros sistemą su realaus laiko atminties langais, magistralės analizatoriumi ir šaltinio lygio derinimu, pritaikytą sudėtingesniems projektams (freescale.com, 2005, p. 188). PCbug11 buvo populiarus derinimo įrankis, leidęs programuoti mikrovaldiklį ir vykdyti klaidų diagnostiką per RS-232 sąsają (freescale.com, 2005, p. 229). Šie įrankiai buvo plačiai naudojami pramonėje ir moksliniuose tyrimuose.
+    \item \textbf{Bibliotekos}: 68HC11 turėjo tam tikras standartines bibliotekas kurios buvo skirtos periferinių įrenginių tokių kaip A/D keitikliai, SPI, ir UART, valdymui, skirtas lengviau integruoti jutiklius, įvedimui ir išvedimui, bei kitoms tipinėms mikrokontrolerių funkcijoms. Taip pat buvo prieinami įrankiai ir bibliotekos, kuriuos sukūrė bendruomenė ir komerciniai tiekėjai (MOTOROLA, INC., 1996, p. 231).
 \end{itemize}
 
-\section{Nuorodos:}
+% Nuorodos
+\section{Nuorodos.}
 \begin{itemize}
     \item VIP CLUB (2024) 32-bit Computers, Chapter 55. Galima rasti adresu: \url{https://vipclubmn.org/cp32bit.html} (Žiūrėta: 18 Gruodį 2024).
     \item Wikipedia (2024) Motorola 68HC11. Galima rasti adresu: \url{https://en.wikipedia.org/wiki/Motorola_68HC11} (Žiūrėta: 18 Gruodį 2024).
@@ -258,7 +269,7 @@ anksčiau (Open AI, 2024).
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar puslapiavimas/segmentavimas ir virtuali atmintis buvo palaikomos kompiuterio architektūroje Motorola 68HC11?". Atsakymas: "Motorola 68HC11 nepalaikė virtualios atminties, puslapiavimo ar segmentavimo, nes tai buvo skirtas įterptinėms sistemoms, kuriose atminties valdymas buvo paprastas ir tiesioginis. Tokio tipo mikrovaldikliuose svarbiausia buvo realus laikas ir greitas atsakas į aparatinės įrangos įvykius, o ne virtualios atminties technologijos.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
     \item Nežinomas (Unknown) (n.d.) 68HC11 Assembly Language Programming. Galima rasti adresu: \url{https://www.clear.rice.edu/elec201/Book/6811_asm.html} (Žiūrėta: 18 Gruodį 2024).
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Kokia buvo kiekvienos architektūros komandų sistema (ISA)? Kiek mašinos komandų turėjo kiekviena architektūra? Kokios buvo instrukcijų (komandų) klasės? Kokius instrukcijų formatus palaikė kiekviena architektūra? Pateikite 8–16 instrukcijų pavyzdžiai. Kokios komandos buvo panašios abi architektūros? Kurios komandos skyrėsi? Motorola 68HC11 ir AN/UYK-43?". Atsakymas: "AN/UYK-43 ir Motorola 68HC11 komandų sistemų (ISA) palyginimas. Komandų sistema (ISA). Komandų skaičius: apie 100–120 komandų, atsižvelgiant į funkcionalumą. Instrukcijų (komandų) klasės. AN/UYK-43: aritmetinės komandos: palaiko standartines sudėties, atimties, daugybos ir dalybos operacijas; loginės komandos: palaiko AND, OR, XOR bei SHIFT operacijas; atminties komandos: palaiko tiesioginį, netiesioginį ir kintamo ilgio simbolių adresavimą; šakų ir šuolių komandos: sąlyginės ir besąlyginės šakos; teksto apdorojimo komandos: specialios instrukcijos kintamo ilgio simbolių valdymui; būsenos valdymo komandos: Privilegijuotų ir neprivilegijuotų režimų valdymas. Motorola 68HC11: aritmetinės komandos: Sudėtis (ADD), atimtis (SUB), inkrementas (INC), dekrementas (DEC); loginės komandos: AND, OR, EXCLUSIVE OR (EOR), neigimas (NEG); duomenų perkėlimo komandos: duomenų kėlimas (LDAA, LDAB), išsaugojimas (STAA, STAB); šakų ir šuolių komandos: sąlyginės šakos (BEQ, BNE), besąlyginiai šuoliai (JMP); būsenos valdymo komandos: registrų valdymas, vėliavų tikrinimas; bitų manipuliavimo komandos: bitų nustatymas ir tikrinimas (BSET, BCLR); Instrukcijų formatai. AN/UYK-43: operacijos kodas – nurodo komandos tipą ir funkcionalumą, operandai – gali būti tiesioginiai, netiesioginiai ar nuorodos į kintamo ilgio simbolius, instrukcijos ilgis: dažnai 16, 32 arba daugiau bitų, priklausomai nuo adresavimo režimo. Motorola 68HC11: operacijos kodas (Opcode) – nurodo komandos tipą; operandai – registrai, tiesioginiai adresai ar poslinkiai; instrukcijos ilgis: nuo 8 iki 16 bitų.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
-    \item Philip Chong (n.d.) EE290A HW2 Microcontroller Survey. Galima rasti adresu: \url{https://people.eecs.berkeley.edu/~newton/Classes/EE290sp99/pages/hw2/micro.htm} (Žiūrėta: 18 Gruodį 2024).
+    \item Philip Chong (1999) EE290A HW2 Microcontroller Survey. Galima rasti adresu: \url{https://people.eecs.berkeley.edu/~newton/Classes/EE290sp99/pages/hw2/micro.htm} (Žiūrėta: 18 Gruodį 2024).
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar motorola 68HC11 buvo naudojamas automobiliu elektroninese valdymo sistemose kaip temperaturos ar kuro lygio jutiklis?". Atsakymas: "Taip, Motorola 68HC11 mikrovaldiklis buvo plačiai naudojamas automobilių elektroninėse valdymo sistemose (EVS), įskaitant temperatūros, kuro lygio ir kitus jutiklius.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar AN/UYK-43 lengvai prieinamas?". Atsakymas: "AN/UYK-43 kompiuteris nėra lengvai prieinamas plačiajai visuomenei, nes tai yra specializuota karinė sistema, sukurta pagal griežtus JAV karinio jūrų laivyno standartus.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar Motorola 68HC11 lengvai prieinamas?". Atsakymas: "Motorola 68HC11 mikrovaldiklis buvo itin populiarus 1990-aisiais, o kai kurios jo panaudojimo sritys išliko aktualios ir šiandien dėl jo paprastumo bei patikimumo. Nors dauguma oficialių (Motorola) įrankių gali būti nebepalaikomi, tokie ištekliai kaip (Freescale) / NXP archyvai, trečiųjų šalių bendruomenės ir retrospektyvinės skaičiavimo grupės suteikia nuolatinę prieigą prie įrankių ir dokumentacijos.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
