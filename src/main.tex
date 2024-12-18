@@ -77,6 +77,13 @@ AN/UYK-43 naudojo 32 bitų mašininį žodį, leidžiantį efektyviai apdoroti d
 \subsection{Motorola 68HC11:}
 Motorola 68HC11 naudojo 8 bitų mašininį žodį, tačiau turėjo 16 bitų registrus, skirtus adresavimui ir kai kurioms aritmetinėms operacijoms (Introduction to Motorola 68HC11, p. 4).
 
+\section{Atminties išdėstymas.}
+\subsection{AN/UYK-43:}
+Atminties išdėstymas: adresų erdvė: AN/UYK-43 sistema turėjo 32 bitų adresų erdvę, todėl teorinis adresų plotis buvo 4 GB; struktūra: adresų erdvė buvo ištisinė, tačiau joje buvo naudojami segmentai arba bankai, kad būtų lengviau tvarkyti atmintį; tipinis atminties kiekis: sistemoje paprastai buvo naudojama nuo 1 MB iki 2 GB operatyviosios atminties, priklausomai nuo versijos ir užduočių; maksimalus atminties kiekis: kadangi adresų erdvė buvo 32 bitų, maksimalus adresuojamos atminties kiekis buvo 4 GB (Open AI, 2024).
+\subsection{Motorola 68HC11:}
+Atminties išdėstymas: adresų erdvė: 68HC11 turėjo 16 bitų adresų magistralę, leidžiančią adresuoti iki 64 KB; struktūra: Adresų erdvė buvo padalyta į segmentus: programos kodas (ROM arba EPROM), operatyvioji atmintis (RAM), specialiųjų funkcijų registrai, I/O periferija.
+Tipinis atminties kiekis: Paprastai naudojama buvo: ROM: 4 KB–8 KB, RAM: 256 B–1 KB, EEPROM: apie 512 B. Maksimalus atminties kiekis: 64 KB (Open AI, 2024).
+
 \section{Virtualioji atmintis.}
 \subsection{AN/UYK-43:}
 \begin{itemize}
@@ -247,6 +254,10 @@ anksčiau (Open AI, 2024).
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar AN/UYK-43 lengvai prieinamas?". Atsakymas: "AN/UYK-43 kompiuteris nėra lengvai prieinamas plačiajai visuomenei, nes tai yra specializuota karinė sistema, sukurta pagal griežtus JAV karinio jūrų laivyno standartus.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
     \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "Ar Motorola 68HC11 lengvai prieinamas?". Atsakymas: "Motorola 68HC11 mikrovaldiklis buvo itin populiarus 1990-aisiais, o kai kurios jo panaudojimo sritys išliko aktualios ir šiandien dėl jo paprastumo bei patikimumo. Nors dauguma oficialių (Motorola) įrankių gali būti nebepalaikomi, tokie ištekliai kaip (Freescale) / NXP archyvai, trečiųjų šalių bendruomenės ir retrospektyvinės skaičiavimo grupės suteikia nuolatinę prieigą prie įrankių ir dokumentacijos.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
     \item MOTOROLA, INC. (1996) M68HC11 REFERENCE MANUAL. Galima rasti adresu: \url{https://mekatronix.com/downloads/docs/hc11_ref_manual.pdf} (Žiūrėta: 18 Gruodį 2024).
+    \item Open AI (2024). Atsakymas sugeneruotas naudodamiesi ChatGPT. Klausimas: "AN/UYK-43 vs Motorrola 68HC11. Koks buvo kiekvienos sistemos atminties išdėstymas? Ar adresų buvo erdvė ištisinė, ar ji buvo suskirstytas į segmentus, puslapius, atminties į bankus? Koks buvo (efektyvus) adreso plotis? Koks buvo maksimalus įmanomas atminties kiekis kiekvienoje sistemoje? Koks buvo tipiškas atminties kiekis, su kuria sistema buvo naudojama?". Atsakymas: "AN/UYK-43: atminties išdėstymas: adresų erdvė: AN/UYK-43 sistema turėjo 32 bitų adresų erdvę, todėl teorinis adresų plotis buvo 4 GB; struktūra: adresų erdvė buvo ištisinė, tačiau joje buvo naudojami segmentai arba bankai, kad būtų lengviau tvarkyti atmintį; tipinis atminties kiekis: sistemoje paprastai buvo naudojama nuo 1 MB iki 2 GB operatyviosios atminties, priklausomai nuo versijos ir užduočių; maksimalus atminties kiekis: kadangi adresų erdvė buvo 32 bitų, maksimalus adresuojamos atminties kiekis buvo 4 GB.
+Motorola 68HC11: atminties išdėstymas: adresų erdvė: 68HC11 turėjo 16 bitų adresų magistralę, leidžiančią adresuoti iki 64 KB; struktūra: Adresų erdvė buvo padalyta į segmentus: programos kodas (ROM arba EPROM), operatyvioji atmintis (RAM), specialiųjų funkcijų registrai, I/O periferija.
+Tipinis atminties kiekis: Paprastai naudojama buvo: ROM: 4 KB–8 KB, RAM: 256 B–1 KB, EEPROM: apie 512 B. Maksimalus atminties kiekis: 64 KB.". (Žiūrėta: 18 Gruodį 2024) (Versija: 4o), iš: \url{https://chat.openai.com/}
+
 \end{itemize}
 
 \end{document}
